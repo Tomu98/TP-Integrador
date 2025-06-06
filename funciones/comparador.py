@@ -3,23 +3,41 @@ from funciones.generador_listas import generar_lista
 
 
 def comparar_algoritmos():
-    print("\n=== COMPARACIÓN DE DOS ALGORITMOS DE ORDENAMIENTO ===")
+    print("\n" + "="*65)
+    print("========  COMPARACIÓN DE DOS ALGORITMOS DE ORDENAMIENTO  ========")
+    print("" + "="*65)
 
-    alg1, alg2 = elegir_algoritmos()
+    while True:
+        # Elegir algoritmos
+        alg1, alg2 = elegir_algoritmos()
 
-    lista_original = generar_lista()
+        # Generar lista
+        lista_original = generar_lista()
 
-    copia1 = lista_original.copy()
-    copia2 = lista_original.copy()
+        # Crear copias de la lista para cada algoritmo
+        copia1 = lista_original.copy()
+        copia2 = lista_original.copy()
 
-    print("Ejecutando algoritmos...")
+        print("Ejecutando algoritmos...")
 
-    nombre1 = aplicar_algoritmo(alg1, copia1)
-    print("Primer algoritmo finalizado.")
-    nombre2 = aplicar_algoritmo(alg2, copia2)
-    print("Segundo algoritmo finalizado.")
+        # Aplicar ambos algoritmos
+        nombre1 = aplicar_algoritmo(alg1, copia1)
+        print("Primer algoritmo finalizado.")
+        nombre2 = aplicar_algoritmo(alg2, copia2)
+        print("Segundo algoritmo finalizado.")
 
-    print(f"\nAlgoritmos '{nombre1}' y '{nombre2}' ejecutados correctamente.\n")
+        print(f"\nAlgoritmos '{nombre1}' y '{nombre2}' ejecutados correctamente.\n")
+
+        # Preguntar si quiere seguir comparando
+        while True:
+            continuar = input("¿Deseás comparar otros algoritmos? (s/n): ").strip().lower()
+            if continuar in ["s", "si"]:
+                break
+            elif continuar in ["n", "no"]:
+                print("\nRegresando al menú principal...\n")
+                return
+            else:
+                print("Opción no válida. Ingrese 's/si' o 'n/no'.")
 
 
 def aplicar_algoritmo(opcion, lista):

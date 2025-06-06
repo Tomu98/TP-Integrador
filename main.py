@@ -3,19 +3,21 @@ from funciones.comparador import comparar_algoritmos
 
 def mostrar_menu():
     """ Muestra el menú inicial del programa """
-    print("=== COMPARADOR DE ALGORITMOS DE ORDENAMIENTO ===")
-    print("\nElija una opción:")
-    print("1. Iniciar")
-    print("2. Como usar el programa")
-    print("3. Salir")
+    print("\n" + "="*60)
+    print("========  COMPARADOR DE ALGORITMOS DE ORDENAMIENTO  ========")
+    print("" + "="*60)
+    print("\n----- Menú principal -----")
+    print("  1. Iniciar")
+    print("  2. Como usar el programa")
+    print("  3. Salir")
 
 
 def mostrar_instrucciones():
     """ Muestra las instrucciones de uso del programa """
-    print("\n" + "="*60)
-    print("INSTRUCCIONES DE USO")
-    print("="*60)
-    print("Este programa te permite comparar dos algoritmos de ordenamiento:")
+    print("\n" + "="*40)
+    print("========  INSTRUCCIONES DE USO  ========")
+    print("="*40)
+    print("\nEste programa te permite comparar dos algoritmos de ordenamiento:")
     print("\n• Algoritmos disponibles:")
     print("  - Ordenamiento por selección")
     print("  - Ordenamiento por inserción") 
@@ -38,7 +40,6 @@ def main():
         match opcion:
             case "1":
                 comparar_algoritmos()
-                print("Regresando al menú principal...\n")
             case "2":
                 mostrar_instrucciones()
             case "3":
