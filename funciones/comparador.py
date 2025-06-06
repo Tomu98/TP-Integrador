@@ -58,15 +58,23 @@ def comparar_algoritmos():
 def aplicar_algoritmo(opcion, lista):
     match opcion:
         case 1:
-            ordenamiento_seleccion(lista)
+            selection_sort(lista)
             return "Selección"
         case 2:
-            ordenamiento_insercion(lista)
+            insertion_sort(lista)
             return "Inserción"
         case 3:
-            ordenamiento_burbuja(lista)
+            bubble_sort(lista)
             return "Burbuja"
         case 4:
-            resultado = ordenamiento_rapido(lista)
+            resultado = quick_sort(lista)
             lista[:] = resultado
             return "Quicksort"
+        case 5:
+            resultado = merge_sort(lista)
+            lista[:] = resultado
+            return "Fusión"
+        case 6:
+            resultado = tim_sort(lista)
+            lista[:] = resultado
+            return "Timsort"
