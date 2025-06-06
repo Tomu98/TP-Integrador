@@ -1,3 +1,4 @@
+import time
 from funciones.algoritmos import *
 from funciones.generador_listas import generar_lista
 
@@ -20,13 +21,27 @@ def comparar_algoritmos():
 
         print("Ejecutando algoritmos...")
 
-        # Aplicar ambos algoritmos
+        # Algoritmo 1
+        inicio1 = time.time()
         nombre1 = aplicar_algoritmo(alg1, copia1)
-        print("Primer algoritmo finalizado.")
-        nombre2 = aplicar_algoritmo(alg2, copia2)
-        print("Segundo algoritmo finalizado.")
+        fin1 = time.time()
+        tiempo1 = fin1 - inicio1
+        print(f"Algoritmo 1 ({nombre1}): Ejecutado en {tiempo1:.4f} segundos")
 
-        print(f"\nAlgoritmos '{nombre1}' y '{nombre2}' ejecutados correctamente.\n")
+        # Algoritmo 2
+        inicio2 = time.time()
+        nombre2 = aplicar_algoritmo(alg2, copia2)
+        fin2 = time.time()
+        tiempo2 = fin2 - inicio2
+        print(f"Algoritmo 2 ({nombre2}): Ejecutado en {tiempo2:.4f} segundos")
+
+        # Comparación
+        if tiempo1 < tiempo2:
+            print(f"\nEl más rápido fue {nombre1} con {abs(tiempo1 - tiempo2):.4f} segundos de diferencia.\n")
+        elif tiempo2 < tiempo1:
+            print(f"\nEl más rápido fue {nombre2} con {abs(tiempo2 - tiempo1):.4f} segundos de diferencia.\n")
+        else:
+            print("\nAmbos algoritmos tardaron el mismo tiempo.\n")
 
         # Preguntar si quiere seguir comparando
         while True:
