@@ -1,11 +1,11 @@
 def elegir_algoritmos():
     print("\n----- Algoritmos para seleccionar -----")
-    print("  1. Selection Sort (Selección)")
-    print("  2. Insertion Sort (Inserción)")
-    print("  3. Bubble Sort (Burbuja)")
-    print("  4. Quick Sort (Rápido)")
-    print("  5. Merge Sort (Fusión)")
-    print("  6. Timsort (Python)")
+    print("  1. SelectionSort (Selección)")
+    print("  2. InsertionSort (Inserción)")
+    print("  3. BubbleSort (Burbuja)")
+    print("  4. QuickSort (Rápido)")
+    print("  5. MergeSort (Fusión)")
+    print("  6. TimSort (Python)")
 
     # Elegir primer algoritmo
     while True:

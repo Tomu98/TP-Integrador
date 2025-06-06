@@ -23,6 +23,8 @@ def mostrar_instrucciones():
     print("  - Ordenamiento por inserción") 
     print("  - Ordenamiento burbuja")
     print("  - Ordenamiento rápido (quicksort)")
+    print("  - Ordenamiento por fusión (mergesort)")
+    print("  - Timsort (algoritmo de Python)")
     print("\n• Tipos de listas para probar:")
     print("  - Lista aleatoria (30,000 elementos)")
     print("  - Lista ya ordenada (1 a 30,000)")

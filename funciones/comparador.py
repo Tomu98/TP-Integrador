@@ -19,7 +19,7 @@ def comparar_algoritmos():
         copia1 = lista_original.copy()
         copia2 = lista_original.copy()
 
-        print("Ejecutando algoritmos...")
+        print("Ejecutando algoritmos...\n")
 
         # Algoritmo 1
         inicio1 = time.time()
@@ -37,9 +37,15 @@ def comparar_algoritmos():
 
         # Comparación
         if tiempo1 < tiempo2:
-            print(f"\nEl más rápido fue {nombre1} con {abs(tiempo1 - tiempo2):.4f} segundos de diferencia.\n")
+            diferencia = abs(tiempo1 - tiempo2)
+            porcentaje = (diferencia / tiempo2) * 100 if tiempo2 != 0 else 0
+            print(f"\nEl más rápido fue '{nombre1}' con {diferencia:.4f} segundos de diferencia.")
+            print(f"Siendo un {porcentaje:.2f}% más rápido que '{nombre2}'.\n")
         elif tiempo2 < tiempo1:
-            print(f"\nEl más rápido fue {nombre2} con {abs(tiempo2 - tiempo1):.4f} segundos de diferencia.\n")
+            diferencia = abs(tiempo2 - tiempo1)
+            porcentaje = (diferencia / tiempo1) * 100 if tiempo1 != 0 else 0
+            print(f"\nEl más rápido fue '{nombre2}' con {diferencia:.4f} segundos de diferencia.")
+            print(f"Siendo un {porcentaje:.2f}% más rápido que '{nombre1}'.\n")
         else:
             print("\nAmbos algoritmos tardaron el mismo tiempo.\n")
 
@@ -59,22 +65,22 @@ def aplicar_algoritmo(opcion, lista):
     match opcion:
         case 1:
             selection_sort(lista)
-            return "Selección"
+            return "SelectionSort"
         case 2:
             insertion_sort(lista)
-            return "Inserción"
+            return "InsertionSort"
         case 3:
             bubble_sort(lista)
-            return "Burbuja"
+            return "BubbleSort"
         case 4:
             resultado = quick_sort(lista)
             lista[:] = resultado
-            return "Quicksort"
+            return "QuickSort"
         case 5:
             resultado = merge_sort(lista)
             lista[:] = resultado
-            return "Fusión"
+            return "MergeSort"
         case 6:
             resultado = tim_sort(lista)
             lista[:] = resultado
-            return "Timsort"
+            return "TimSort"
