@@ -1,7 +1,7 @@
 def elegir_algoritmos():
     print("\n----- Algoritmos para seleccionar -----")
     print("  1. Selection Sort (Selección)")
-    print("  2. Insertio nSort (Inserción)")
+    print("  2. Insertion Sort (Inserción)")
     print("  3. Bubble Sort (Burbuja)")
     print("  4. Quick Sort (Rápido)")
 
