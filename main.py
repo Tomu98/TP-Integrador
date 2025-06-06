@@ -5,7 +5,7 @@ def mostrar_menu():
     """ Muestra el menú inicial del programa """
     print("=== COMPARADOR DE ALGORITMOS DE ORDENAMIENTO ===")
     print("\nElija una opción:")
-    print("1. Comparar algoritmos")
+    print("1. Iniciar")
     print("2. Como usar el programa")
     print("3. Salir")
 
@@ -15,7 +15,7 @@ def mostrar_instrucciones():
     print("\n" + "="*60)
     print("INSTRUCCIONES DE USO")
     print("="*60)
-    print("Este programa te permite comparar diferentes algoritmos de ordenamiento:")
+    print("Este programa te permite comparar dos algoritmos de ordenamiento:")
     print("\n• Algoritmos disponibles:")
     print("  - Ordenamiento por selección")
     print("  - Ordenamiento por inserción") 
@@ -25,17 +25,14 @@ def mostrar_instrucciones():
     print("  - Lista aleatoria (30,000 elementos)")
     print("  - Lista ya ordenada (1 a 30,000)")
     print("  - Lista ordenada invertida (30,000 a 1)")
-    print("\n• Puedes probar un algoritmo individual o compararlos todos")
-    print("• Cada algoritmo trabaja con su propia copia de la lista")
+    print("\n• Cada algoritmo trabaja con su propia copia de la lista")
     print("\nPresiona Enter para continuar...")
     input()
 
 
 def main():
-    """ Función principal del programa """
     while True:
         mostrar_menu()
-
         opcion = input("\nIngrese una opción (1-3): ").strip()
 
         match opcion:
@@ -46,10 +43,10 @@ def main():
                 mostrar_instrucciones()
             case "3":
                 print("\nSaliendo...")
-                print("Gracias por usar el programa. ¡Hasta luego!.\n")
+                print("Gracias por usar el programa. ¡Hasta luego!\n")
                 break
             case _:
-                print("Opción no válida, por favor intente de nuevo.")
+                print("Opción no válida, por favor intente de nuevo.\n")
 
 
 if __name__ == "__main__":
