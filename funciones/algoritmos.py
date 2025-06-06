@@ -1,3 +1,31 @@
+def elegir_algoritmos():
+    print("\n----- Algoritmos para seleccionar -----")
+    print("  1. Selection Sort (Selección)")
+    print("  2. Insertio nSort (Inserción)")
+    print("  3. Bubble Sort (Burbuja)")
+    print("  4. Quick Sort (Rápido)")
+
+    # Elegir primer algoritmo
+    while True:
+        opcion1 = input("\nAlgoritmo 1: ").strip()
+        if opcion1 in ["1", "2", "3", "4"]:
+            break
+        else:
+            print("Opción no válida. Intente nuevamente.")
+
+    # Elegir segundo algoritmo
+    while True:
+        opcion2 = input("Algoritmo 2: ").strip()
+        if opcion2 not in ["1", "2", "3", "4"]:
+            print("Opción no válida. Intente nuevamente.")
+        elif opcion2 == opcion1:
+            print("Debe elegir un algoritmo diferente al primero.")
+        else:
+            break
+
+    return int(opcion1), int(opcion2)
+
+
 def ordenamiento_seleccion(lista):
     n = len(lista)
     for i in range(n):

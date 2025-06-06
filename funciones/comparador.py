@@ -3,72 +3,55 @@ from funciones.generador_listas import generar_lista
 
 
 def comparar_algoritmos():
-    print("\n=== COMPARADOR DE ALGORITMOS DE ORDENAMIENTO ===")
+    print("\n" + "="*65)
+    print("========  COMPARACIÓN DE DOS ALGORITMOS DE ORDENAMIENTO  ========")
+    print("" + "="*65)
 
     while True:
-        print("\nElige un algoritmo:")
-        print("1. Ordenamiento por selección")
-        print("2. Ordenamiento por inserción")
-        print("3. Ordenamiento burbuja")
-        print("4. Ordenamiento rápido (quicksort)")
-        print("5. Comparar todos los algoritmos")
-        print("6. Salir")
+        # Elegir algoritmos
+        alg1, alg2 = elegir_algoritmos()
 
-        opcion = input("\nOpción: ").strip()
+        # Generar lista
+        lista_original = generar_lista()
 
-        if opcion in ["1", "2", "3", "4", "5"]:
-            # Generar la lista
-            lista_original = generar_lista()
+        # Crear copias de la lista para cada algoritmo
+        copia1 = lista_original.copy()
+        copia2 = lista_original.copy()
 
-            if opcion == "1":
-                print("\n--- Ejecutando Ordenamiento por selección ---")
-                lista_copia = lista_original.copy()
-                ordenamiento_seleccion(lista_copia)
-                print("Ordenamiento completado.")
+        print("Ejecutando algoritmos...")
 
-            elif opcion == "2":
-                print("\n--- Ejecutando Ordenamiento por inserción ---")
-                lista_copia = lista_original.copy()
-                ordenamiento_insercion(lista_copia)
-                print("Ordenamiento completado.")
+        # Aplicar ambos algoritmos
+        nombre1 = aplicar_algoritmo(alg1, copia1)
+        print("Primer algoritmo finalizado.")
+        nombre2 = aplicar_algoritmo(alg2, copia2)
+        print("Segundo algoritmo finalizado.")
 
-            elif opcion == "3":
-                print("\n--- Ejecutando Ordenamiento burbuja ---")
-                lista_copia = lista_original.copy()
-                ordenamiento_burbuja(lista_copia)
-                print("Ordenamiento completado.")
+        print(f"\nAlgoritmos '{nombre1}' y '{nombre2}' ejecutados correctamente.\n")
 
-            elif opcion == "4":
-                print("\n--- Ejecutando Ordenamiento rápido ---")
-                lista_copia = lista_original.copy()
-                ordenamiento_rapido(lista_copia)
-                print("Ordenamiento completado.")
+        # Preguntar si quiere seguir comparando
+        while True:
+            continuar = input("¿Deseás comparar otros algoritmos? (s/n): ").strip().lower()
+            if continuar in ["s", "si"]:
+                break
+            elif continuar in ["n", "no"]:
+                print("\nRegresando al menú principal...\n")
+                return
+            else:
+                print("Opción no válida. Ingrese 's/si' o 'n/no'.")
 
-            elif opcion == "5":
-                print("\n--- Ejecutando todos los algoritmos ---")
 
-                print("\nEjecutando Ordenamiento por selección...")
-                lista_copia = lista_original.copy()
-                ordenamiento_seleccion(lista_copia)
-                print("Ordenamiento por selección completado.")
-
-                print("\nEjecutando Ordenamiento por inserción...")
-                lista_copia = lista_original.copy()
-                ordenamiento_insercion(lista_copia)
-                print("Ordenamiento por inserción completado.")
-
-                print("\nEjecutando Ordenamiento burbuja...")
-                lista_copia = lista_original.copy()
-                ordenamiento_burbuja(lista_copia)
-                print("Ordenamiento burbuja completado.")
-
-                print("\nEjecutando Ordenamiento rápido...")
-                lista_copia = lista_original.copy()
-                ordenamiento_rapido(lista_copia)
-                print("Ordenamiento rápido completado.")
-
-        elif opcion == "6":
-            break
-        else:
-            print("Opción no válida. Intente nuevamente.")
-
+def aplicar_algoritmo(opcion, lista):
+    match opcion:
+        case 1:
+            ordenamiento_seleccion(lista)
+            return "Selección"
+        case 2:
+            ordenamiento_insercion(lista)
+            return "Inserción"
+        case 3:
+            ordenamiento_burbuja(lista)
+            return "Burbuja"
+        case 4:
+            resultado = ordenamiento_rapido(lista)
+            lista[:] = resultado
+            return "Quicksort"

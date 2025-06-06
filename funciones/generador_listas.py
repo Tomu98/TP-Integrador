@@ -1,36 +1,53 @@
 from random import randint
 
 
-# Cada función genera una lista de 30.000 elementos
-def generar_lista_aleatoria():
-    return [randint(1, 30000) for _ in range(30000)]
+def generar_lista_aleatoria(n):
+    return [randint(1, n) for _ in range(n)]
 
-def generar_lista_ordenada():
-    return list(range(1, 30001))
+def generar_lista_ordenada(n):
+    return list(range(1, n + 1))
 
-def generar_lista_ordenada_inver():
-    return list(range(30000, 0, -1))
+def generar_lista_ordenada_inver(n):
+    return list(range(n, 0, -1))
 
 
 def generar_lista():
-    print("\nElija el tipo de lista:")
-    print("1. Aleatoria")
-    print("2. Ordenada")
-    print("3. Ordenada invertida")
+    print("\n----- Tamaño de la lista -----")
+    print("  1. Pequeña (1.000 elementos)")
+    print("  2. Mediana (10.000 elementos)")
+    print("  3. Grande (30.000 elementos)")
 
     while True:
-        opcion = input("\nOpción: ").strip()
-        if opcion in ["1", "2", "3"]:
-            match opcion:
-                case "1":
-                    lista = generar_lista_aleatoria()
-                case "2":
-                    lista = generar_lista_ordenada()
-                case "3":
-                    lista = generar_lista_ordenada_inver()
+        tam_op = input("\nSeleccione el tamaño: ").strip()
+        if tam_op == "1":
+            n = 1000
+            break
+        elif tam_op == "2":
+            n = 10000
+            break
+        elif tam_op == "3":
+            n = 30000
+            break
+        else:
+            print("Opción no válida. Intente nuevamente.")
 
-            print("\nLista generada con 30.000 elementos.")
-            # Mostramos un preview opcional
+    print("\n----- Tipo de lista -----")
+    print("  1. Aleatoria")
+    print("  2. Ordenada")
+    print("  3. Ordenada invertida")
+
+    while True:
+        tipo_op = input("\nSeleccione el tipo: ").strip()
+        if tipo_op in ["1", "2", "3"]:
+            match tipo_op:
+                case "1":
+                    lista = generar_lista_aleatoria(n)
+                case "2":
+                    lista = generar_lista_ordenada(n)
+                case "3":
+                    lista = generar_lista_ordenada_inver(n)
+
+            print(f"\nLista generada con {n} elementos.")
             print(f"Inicio: {lista[:5]} ... {lista[-5:]} Fin.\n")
             return lista
         else:
