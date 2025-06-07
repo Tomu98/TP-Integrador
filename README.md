@@ -9,6 +9,8 @@ Este proyecto fué realizado para el **Trabajo Integrador** de la materia ***"Pr
 
 **Comisión:** M2025-5
 
+<br>
+
 --- 
 
 ## Descripción del proyecto
@@ -23,6 +25,8 @@ El usuario puede seleccionar entre seis algoritmos y ejecutarlos sobre de difere
 - Quick Sort
 - Merge Sort
 - Tim Sort (nativo de Python)
+
+<br>
 
 ---
 
@@ -40,6 +44,8 @@ El usuario puede seleccionar entre seis algoritmos y ejecutarlos sobre de difere
 4. Se puede repetir la comparación o volver al menú principal.
 
 > Se requiere Python 3.10+ por el uso de estructuras `match-case`.
+
+<br>
 
 ---
 
