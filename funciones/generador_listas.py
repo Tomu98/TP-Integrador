@@ -12,6 +12,7 @@ def generar_lista_ordenada_inver(n):
 
 
 def generar_lista():
+    """ Genera una lista de prueba según las opciones del usuario """
     print("\n----- Tamaño de la lista -----")
     print("  1. Pequeña (1.000 elementos)")
     print("  2. Mediana (10.000 elementos)")

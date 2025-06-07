@@ -4,6 +4,7 @@ from funciones.generador_listas import generar_lista
 
 
 def comparar_algoritmos():
+    """ Compara dos algoritmos de ordenamiento seleccionados por el usuario. """
     print("\n" + "="*65)
     print("========  COMPARACIÓN DE DOS ALGORITMOS DE ORDENAMIENTO  ========")
     print("" + "="*65)
@@ -11,6 +12,9 @@ def comparar_algoritmos():
     while True:
         # Elegir algoritmos
         alg1, alg2 = elegir_algoritmos()
+
+        # Mostrar información de los algoritmos seleccionados
+        mostrar_info_algoritmos(alg1, alg2)
 
         # Generar lista
         lista_original = generar_lista()
@@ -26,14 +30,14 @@ def comparar_algoritmos():
         nombre1 = aplicar_algoritmo(alg1, copia1)
         fin1 = time.time()
         tiempo1 = fin1 - inicio1
-        print(f"Algoritmo 1 ({nombre1}): Ejecutado en {tiempo1:.4f} segundos")
+        print(f"• Algoritmo 1 ({nombre1}): Ejecutado en {tiempo1:.4f} segundos")
 
         # Algoritmo 2
         inicio2 = time.time()
         nombre2 = aplicar_algoritmo(alg2, copia2)
         fin2 = time.time()
         tiempo2 = fin2 - inicio2
-        print(f"Algoritmo 2 ({nombre2}): Ejecutado en {tiempo2:.4f} segundos")
+        print(f"• Algoritmo 2 ({nombre2}): Ejecutado en {tiempo2:.4f} segundos")
 
         # Comparación
         if tiempo1 < tiempo2:
@@ -62,6 +66,7 @@ def comparar_algoritmos():
 
 
 def aplicar_algoritmo(opcion, lista):
+    """ Aplica el algoritmo seleccionado a la lista y devuelve su nombre. """
     match opcion:
         case 1:
             selection_sort(lista)

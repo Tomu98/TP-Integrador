@@ -1,4 +1,5 @@
 from funciones.comparador import comparar_algoritmos
+from funciones.infos import mostrar_instrucciones
 
 
 def mostrar_menu():
@@ -10,28 +11,6 @@ def mostrar_menu():
     print("  1. Iniciar")
     print("  2. Como usar el programa")
     print("  3. Salir")
-
-
-def mostrar_instrucciones():
-    """ Muestra las instrucciones de uso del programa """
-    print("\n" + "="*40)
-    print("========  INSTRUCCIONES DE USO  ========")
-    print("="*40)
-    print("\nEste programa te permite comparar dos algoritmos de ordenamiento:")
-    print("\n• Algoritmos disponibles:")
-    print("  - Ordenamiento por selección")
-    print("  - Ordenamiento por inserción") 
-    print("  - Ordenamiento burbuja")
-    print("  - Ordenamiento rápido (quicksort)")
-    print("  - Ordenamiento por fusión (mergesort)")
-    print("  - Timsort (algoritmo de Python)")
-    print("\n• Tipos de listas para probar:")
-    print("  - Lista aleatoria (30,000 elementos)")
-    print("  - Lista ya ordenada (1 a 30,000)")
-    print("  - Lista ordenada invertida (30,000 a 1)")
-    print("\n• Cada algoritmo trabaja con su propia copia de la lista")
-    print("\nPresiona Enter para continuar...")
-    input()
 
 
 def main():

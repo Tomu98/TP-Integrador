@@ -1,4 +1,8 @@
+from funciones.infos import info_algoritmos
+
+
 def elegir_algoritmos():
+    """ Permite al usuario seleccionar dos algoritmos de ordenamiento para comparar. """
     print("\n----- Algoritmos para seleccionar -----")
     print("  1. SelectionSort (Selección)")
     print("  2. InsertionSort (Inserción)")
@@ -28,6 +32,22 @@ def elegir_algoritmos():
     return int(opcion1), int(opcion2)
 
 
+def mostrar_info_algoritmos(alg1, alg2):
+    """ Muestra información detallada sobre los algoritmos seleccionados. """
+    print("\n----- Información de los algoritmos seleccionados -----\n")
+
+    for idx, i in enumerate([alg1, alg2], start=1):
+        info = info_algoritmos[i]
+        print(f"• Algoritmo {idx}: {info['nombre']}")
+        print(f"  - Descripción: {info['descripcion']}")
+        print(f"  - Ventajas: {info['ventajas']}")
+        print(f"  - Desventajas: {info['desventajas']}")
+        print(f"  - Complejidad: {info['complejidad']}\n")
+
+    input("Presiona Enter para continuar con la comparación...")
+
+
+# Algoritmos de ordenamiento
 def selection_sort(lista):
     n = len(lista)
     for i in range(n):
