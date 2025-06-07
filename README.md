@@ -1,7 +1,7 @@
 # Análisis de Algoritmos de Ordenamiento
 
-Este proyecto fué realizaro para el Trabajo Integrador de la materia **Programación I**
-**Tecnicatura Universitaria en Programación** - *Universidad Tecnológica Nacional*
+Este proyecto fué realizado para el **Trabajo Integrador** de la materia ***"Programación I"*** <br> 
+**Tecnicatura Universitaria en Programación** - *Universidad Tecnológica Nacional (UTN)*
 
 ### Alumnos:
 - **Ezequiel Alejandro Ventura**
