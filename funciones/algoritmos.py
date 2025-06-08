@@ -47,6 +47,32 @@ def mostrar_info_algoritmos(alg1, alg2):
     input("Presiona Enter para continuar con la comparación...")
 
 
+def aplicar_algoritmo(opcion, lista):
+    """ Aplica el algoritmo seleccionado a la lista y devuelve su nombre. """
+    match opcion:
+        case 1:
+            selection_sort(lista)
+            return "SelectionSort"
+        case 2:
+            insertion_sort(lista)
+            return "InsertionSort"
+        case 3:
+            bubble_sort(lista)
+            return "BubbleSort"
+        case 4:
+            resultado = quick_sort(lista)
+            lista[:] = resultado
+            return "QuickSort"
+        case 5:
+            resultado = merge_sort(lista)
+            lista[:] = resultado
+            return "MergeSort"
+        case 6:
+            resultado = tim_sort(lista)
+            lista[:] = resultado
+            return "TimSort"
+
+
 # Algoritmos de ordenamiento
 def selection_sort(lista):
     n = len(lista)
