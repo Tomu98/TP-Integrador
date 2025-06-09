@@ -36,14 +36,14 @@ El usuario puede seleccionar entre seis algoritmos y ejecutarlos sobre de difere
 1. Ejecutar el archivo `main.py`.
 2. Desde el menú principal:
     - Elegir la opción `1` para iniciar la comparación.
+    - Elegir dos algoritmos distintos para comparar.
     - Seleccionar el tamaño de la lista (1.000, 10.000, 30.000 elementos).
     - Seleccionar el tipo de lista (aleatoria, ordenada o invertida).
-    - Elegit dos algoritmos distintos para comparar.
-3. El programa mostrará:
+4. El programa mostrará:
     - Información resumida de cada algoritmo seleccionado.
     - Tiempos de ejecución individuales.
     - Cuál fue más rápido y en qué porcentaje.
-4. Se puede repetir la comparación o volver al menú principal.
+5. Se puede repetir la comparación o volver al menú principal.
 
 > Se requiere Python 3.10+ por el uso de estructuras `match-case`.
 
