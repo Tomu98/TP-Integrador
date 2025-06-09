@@ -9,6 +9,10 @@ Este proyecto fué realizado para el **Trabajo Integrador** de la materia ***"Pr
 
 **Comisión:** M2025-5
 
+<a href="https://www.youtube.com/watch?v=xY-uw5Y_U7w">
+  <img src="https://img.youtube.com/vi/xY-uw5Y_U7w/0.jpg" alt="Demo en YouTube">
+</a>
+
 <br>
 
 --- 
