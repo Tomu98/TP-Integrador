@@ -9,7 +9,7 @@ Este proyecto fué realizado para el **Trabajo Integrador** de la materia ***"Pr
 
 **Comisión:** M2025-5
 
-**Video en YouTube:** https://www.youtube.com/watch?v=xY-uw5Y_U7w&list=LL&index=2&t=1s
+**Video en YouTube:** https://www.youtube.com/watch?v=xY-uw5Y_U7w
 
 <br>
 
